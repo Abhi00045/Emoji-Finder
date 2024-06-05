@@ -28,5 +28,6 @@ main{
     }
 }
 #tableBody{
-    background: rgb(198, 136, 185);
+   height: 100vh;
+   width: 500px;
 }
