@@ -1,23 +1,8 @@
 
-
-// function searchEmoji(e){
-//     let display = e.target.value;
-//   //   console.log(display);
-//   displayEmoji(display);
-//   }
+// import emojiList from "./emoji.js";
 
 function displayEmoji(){
-    //  let filteredResult = emojiList.filter(e=>{
-    //     if(e.description.indexOf(searchQuery)!=-1){
-    //         return true;
-    //     }
-    //     if(e.aliases.some(elm=>elm.startsWith(searchQuery))){
-    //         return true;
-    //     }
-    //     if(e.tags.some(elm=>elm.startsWith(searchQuery))){
-    //         return true;
-    //     }
-    //  });
+
     emojiList.forEach((e)=>{
         let parent = document.getElementById("tableBody");
 
@@ -42,6 +27,17 @@ function displayEmoji(){
 
     });
 };
-let search=document.getElementById("searchField");
-// search.addEventListener("keydown",searchEmoji);
+
+let searchField = document.getElementById("searchField");
+
+function searchEmoji(){
+
+    let search = document.getElementById("searchField").value;
+    if(search==""){
+        displayEmoji();
+        alert("Please Enter Something");
+    }
+}
+
+search.addEventListener("keydown",searchEmoji);
 window.addEventListener("load",displayEmoji);
