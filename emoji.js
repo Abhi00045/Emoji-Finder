@@ -1,4 +1,4 @@
-let emojiList = [
+export let emojiList = [
     {
       "emoji": "😀"
     , "description": "grinning face"
